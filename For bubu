@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Us Forever ❤️ 20 Nov</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,sans-serif;background:linear-gradient(135deg,#ffd6e0,#ffe5ec,#fff0f3);color:#4a3538;padding:16px 12px 45px;display:flex;justify-content:center;overflow-x:hidden;position:relative;min-height:100vh}
+.bg-float{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.f-item{position:absolute;bottom:-40px;font-size:22px;opacity:.55;animation:rise 8s linear infinite}
+@keyframes rise{0%{transform:translateY(0) rotate(0deg);opacity:.65}100%{transform:translateY(-110vh) rotate(25deg);opacity:0}}
+.card{background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-radius:26px;padding:20px 15px;max-width:440px;width:100%;box-shadow:0 12px 35px rgba(201,24,74,.16);border:1.5px solid #fff;text-align:center;position:relative;z-index:2}
+.music-bar{background:#fff0f3;border:1.5px solid #ffb3c1;border-radius:16px;padding:10px 12px;margin-bottom:14px;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.music-info{text-align:left;font-size:12px;color:#800f2f;font-weight:600}
+.music-info span{display:block;font-size:11px;color:#7d5a5f;font-weight:400}
+.bears{display:flex;justify-content:center;align-items:center;gap:8px;margin-bottom:8px;animation:b 2s infinite}
+@keyframes b{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.badge{display:inline-block;background:#ffe5ec;color:#c9184a;font-size:12px;font-weight:700;padding:5px 14px;border-radius:20px;margin-bottom:8px}
+h1{font-size:22px;color:#800f2f;margin-bottom:4px}
+.sub{font-size:13px;color:#7d5a5f;margin-bottom:14px}
+.box{background:#fff8f9;border-left:3.5px solid #ff4d6d;border-radius:16px;padding:14px;text-align:left;font-size:13.5px;line-height:1.7;margin-bottom:14px}
+.box p{margin-bottom:10px}.box p:last-child{margin-bottom:0}
+.mem-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:14px;text-align:left}
+.mem-item{background:#fff;border:1px solid #ffccd5;border-radius:14px;padding:10px;font-size:12px;line-height:1.5}
+.mem-item strong{display:block;color:#a4133c;font-size:12.5px;margin-bottom:2px}
+.promise{background:linear-gradient(135deg,#fff0f3,#ffe5ec);border:1.5px dashed #ff4d6d;border-radius:18px;padding:14px;margin-bottom:16px}
+.promise h3{font-size:15px;color:#a4133c;margin-bottom:5px}
+.promise p{font-size:13.5px;line-height:1.6;font-weight:500}
+.g-card{background:#fff;border:1.5px solid #ffd6e0;border-radius:18px;padding:13px;margin-bottom:14px}
+.g-card h4{font-size:14px;color:#800f2f;margin-bottom:3px}
+.g-sub{font-size:12px;color:#7d5a5f;margin-bottom:9px}
+.grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;background:#fff8f9;padding:8px;border-radius:12px;border:1px solid #ffccd5;margin-bottom:8px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;background:#fff8f9;padding:8px;border-radius:12px;border:1px solid #ffccd5;margin-bottom:8px}
+.tile{font-size:23px;background:#fff;border:1px solid #ffd6e0;border-radius:10px;padding:7px 0;cursor:pointer;user-select:none;-webkit-tap-highlight-color:transparent;transition:transform .12s}
+.tile:active{transform:scale(.88)}
+.tile.done{background:#ffe5ec;border-color:#ff4d6d}
+.meter-bg{width:100%;height:18px;background:#ffe5ec;border-radius:20px;overflow:hidden;margin:8px 0}
+.meter-fill{height:100%;width:10%;background:linear-gradient(90deg,#ff758f,#c9184a);transition:width .2s}
+.q-opts{display:flex;flex-direction:column;gap:6px;margin-top:8px}
+.q-btn{background:#fff8f9;color:#4a3538;border:1px solid #ffb3c1;padding:9px;border-radius:10px;font-size:12.5px;font-weight:500;text-align:left}
+.wheel-res{background:#fff0f3;border-radius:12px;padding:11px;font-size:13px;font-weight:600;color:#800f2f;min-height:44px;display:flex;align-items:center;justify-content:center;margin-bottom:9px;border:1px dashed #ff758f}
+button{border:none;border-radius:12px;font-weight:600;cursor:pointer;font-family:inherit;-webkit-tap-highlight-color:transparent}
+.btn{background:#ff4d6d;color:#fff;padding:9px 16px;font-size:12.5px;box-shadow:0 4px 10px rgba(255,77,109,.25)}
+.sm{background:#ff4d6d;color:#fff;padding:5px 11px;font-size:11.5px}
+.bar{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#a4133c;font-weight:600}
+.win{display:none;font-size:12.5px;font-weight:600;color:#c9184a;margin:5px 0}
+.end-box{background:#fff8f9;border:1.5px solid #ffb3c1;border-radius:18px;padding:15px}
+</style>
+</head>
+<body>
+<div class="bg-float" id="bgFloat"></div>
+
+<!-- Hidden YouTube Player for "Thinking of You" -->
+<div style="position:fixed;width:1px;height:1px;opacity:0;pointer-events:none;overflow:hidden">
+  <iframe id="ytSong" width="200" height="200" src="https://youtube.com" allow="autoplay"></iframe>
+</div>
+
+<div class="card">
+  <!-- Music Bar -->
+  <div class="music-bar">
+    <div class="music-info">🎵 Thinking of You<span>Our background vibe — tap to play</span></div>
+    <button class="sm" id="mBtn" onclick="toggleSong()">Play Song ▶️</button>
+  </div>
+
+  <div class="bears">
+    <svg width="54" height="54" viewBox="0 0 100 100"><circle cx="28" cy="28" r="14" fill="#fff" stroke="#5c4033" stroke-width="5"/><circle cx="72" cy="28" r="14" fill="#fff" stroke="#5c4033" stroke-width="5"/><ellipse cx="50" cy="56" rx="36" ry="32" fill="#fff" stroke="#5c4033" stroke-width="5"/><circle cx="38" cy="50" r="4.5" fill="#3d2b2e"/><circle cx="62" cy="50" r="4.5" fill="#3d2b2e"/><ellipse cx="28" cy="58" rx="6" ry="3.5" fill="#ff9ebb"/><ellipse cx="72" cy="58" rx="6" ry="3.5" fill="#ff9ebb"/><path d="M44 65 Q50 71 56 65" stroke="#3d2b2e" stroke-width="3.5" fill="none"/></svg>
+    <span style="font-size:22px">💕</span>
+    <svg width="54" height="54" viewBox="0 0 100 100"><circle cx="28" cy="28" r="14" fill="#a47148" stroke="#5c4033" stroke-width="5"/><circle cx="72" cy="28" r="14" fill="#a47148" stroke="#5c4033" stroke-width="5"/><ellipse cx="50" cy="56" rx="36" ry="32" fill="#a47148" stroke="#5c4033" stroke-width="5"/><ellipse cx="50" cy="61" rx="14" ry="11" fill="#f3d5b5"/><circle cx="38" cy="50" r="4.5" fill="#3d2b2e"/><circle cx="62" cy="50" r="4.5" fill="#3d2b2e"/><path d="M45 64 Q50 69 55 64" stroke="#3d2b2e" stroke-width="3.5" fill="none"/></svg>
+  </div>
+
+  <div class="badge">20th November • 1.5 Years & Counting ❤️</div>
+  <h1>Hum Hamesha Saath Rahenge, Tanishi</h1>
+  <p class="sub">Celebrating our journey, our bond, and every moment ahead</p>
+
+  <div class="box">
+    <p>20th November ko hamare 1.5 saal poore hue, aur is poore safar mein jitna pyaar, care aur sukoon tumne mujhe diya hai, uske liye dil se thank you Tanishi. Hum dono ek dusre ke liye hi bane hain—mere bade haath mein tera voh chhota sa haath, aur hamari voh hug jahan saari thakaan mit jaati hai.</p>
+    <p>Chahe koi bhi waqt aaye, <strong>hum hamesha saath rahenge aur har cheez mil kar handle karenge</strong>. Mai hamesha tumhara sukoon aur tumhari strength ban kar tumhare saath khada rahunga.</p>
+  </div>
+
+  <!-- 4 Cute Memories Grid -->
+  <div class="mem-grid">
+    <div class="mem-item"><strong>🗓️ 20th November</strong>1.5 saal ka voh khoobsurat milestone jo hamesha dil ke kareeb rahega.</div>
+    <div class="mem-item"><strong>🤝 Big & Small Hands</strong>Jab tumhara chhota sa haath mere haath mein hota hai, sab perfect lagta hai.</div>
+    <div class="mem-item"><strong>🤗 Our Comfort Hugs</strong>Voh ek hug jo bina kuch kahe saari tension aur thakaan gayab kar deti hai.</div>
+    <div class="mem-item"><strong>🐻 Bubu & Dudu Vibe</strong>Hamari nok-jhok, masti, aur phir wahi pyaar se ek dusre ko mana lena.</div>
+  </div>
+
+  <div class="promise">
+    <h3>Hamesha Saath Rehne Ka Vaada 🤝</h3>
+    <p>"Bas haath pakad kar rakhna mera, Tanishi... hum saath baith kar har baat karenge, aur hamesha ek dusre ke saath rahenge. Mai har kadam pr tumhare saath hu."</p>
+  </div>
+
+  <!-- Game 1: Memory Match -->
+  <div class="g-card">
+    <h4>1. Bubu & Dudu Memory Match 🧸</h4>
+    <p class="g-sub">Tap two cards to match all 4 cute pairs!</p>
+    <div class="grid4" id="memGrid"></div>
+    <div class="win" id="memWin">Yay! Smartest Bubu ever! All pairs matched 🥰❤️</div>
+    <div class="bar"><span>Pairs: <b id="mScore">0</b> / 4</span><button class="sm" onclick="initMem()">Reset</button></div>
+  </div>
+
+  <!-- Game 2: Find Hidden Kiss -->
+  <div class="g-card">
+    <h4>2. Find Dudu's Hidden Kiss 😘</h4>
+    <p class="g-sub">Tap the gift boxes to find where Dudu hid a kiss!</p>
+    <div class="grid5" id="kissGrid"></div>
+    <div class="win" id="kissWin">Mil gaya! Ek bada sa hug & kiss for you 🐻💋🐼</div>
+    <div class="bar"><span>Tries: <b id="kTries">0</b></span><button class="sm" onclick="initKiss()">Play Again</button></div>
+  </div>
+
+  <!-- Game 3: Heart Pop -->
+  <div class="g-card">
+    <h4>3. Fill The Screen With Hearts 💖</h4>
+    <p class="g-sub">Tap all 10 tiles to turn them into love!</p>
+    <div class="grid5" id="popGrid"></div>
+    <div class="win" id="popWin">10/10! Poora dil pyaar se bhar gaya 😊❤️</div>
+    <div class="bar"><span>Hearts: <b id="pScore">0</b> / 10</span><button class="sm" onclick="initPop()">Reset</button></div>
+  </div>
+
+  <!-- Game 4: Love Meter Tapper -->
+  <div class="g-card">
+    <h4>4. Bubu & Dudu Love Meter 🌡️</h4>
+    <p class="g-sub">Tap fast to fill our love meter to 100%!</p>
+    <div class="meter-bg"><div class="meter-fill" id="mFill"></div></div>
+    <div class="win" id="meterWin">100% Unbreakable Bond! Forever Together ♾️❤️</div>
+    <div class="bar"><span>Love: <b id="lPct">10</b>%</span><button class="sm" onclick="tapLove()">Tap ❤️ +15%</button></div>
+  </div>
+
+  <!-- Game 5: Cute Couple Mini Quiz -->
+  <div class="g-card">
